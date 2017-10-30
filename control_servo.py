@@ -9,8 +9,8 @@ parser = argparse.ArgumentParser(
     epilog="pretty neat, huh?",
     fromfile_prefix_chars='@',
 )
-parser.add_argument("-A", "--angle", type=int, help="echo the string you use here")
-parser.add_argument("-O", "--orientation", help="echo the string you use here")
+parser.add_argument("-A", "--angle", dest="angle", type=int, help="echo the string you use here")
+parser.add_argument("-O", "--orientation", dest="orientation", type=str, help="echo the string you use here")
 parser.add_argument('-V', '--version', action="version", version="%(prog)s 0.1")
 
 def setup():
